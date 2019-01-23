@@ -7,22 +7,19 @@
       v-bind:src="settings.metadata.authorAvatar.imgixUrl.src"
       v-bind:alt="settings.metadata.authorName"
       :style="{
-        marginRight: `${rhythmMethod(1 / 2)}`,
+        marginRight: `${rhythm(1 / 2)}`,
         marginBottom: 0,
-        width: `${rhythmMethod(2)}`,
-        height: `${rhythmMethod(2)}`
+        width: `${rhythm(2)}`,
+        height: `${rhythm(2)}`
     }">
       <div v-html="settings.metadata.authorBio"></div>
   </div>
 </template>
 <script>
-import { rhythm } from "../utils/typography";
+import mixins from '../utils/mixins'
+
 export default {
   props: ["settings"],
-  methods: {
-    rhythmMethod(value) {
-      return rhythm(value);
-    }
-  }
+  mixins: [mixins]
 };
 </script>

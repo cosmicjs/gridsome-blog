@@ -2,29 +2,29 @@
  <Layout :hero=false :settings=$page.settings.edges[0].node >
     <h3>{{$page.settings.edges[0].node.metadata.siteHeading}}</h3>
     <g-link :to="`/`"> ← Back to Posts</g-link>
-    <h1 :style="{marginTop: rhythmMethod(1)}">{{$page.post.title}}</h1>
+    <h1 :style="{marginTop: rhythm(1)}">{{$page.post.title}}</h1>
     <p :style="{
-      ...scaleMethod(-1 / 5),
+      ...scale(-1 / 5),
       display: 'block',
-      marginBottom: rhythmMethod(0.6),
-      marginTop: rhythmMethod(-0.6),
+      marginBottom: rhythm(0.6),
+      marginTop: rhythm(-0.6),
     }">{{$page.post.createdAt}}</p>
     <div :style="{
         backgroundColor: '#007ACC',
         backgroundImage: `url(${$page.post.metadata.hero.imgixUrl.src}?w=2000)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        marginBottom: `${rhythmMethod(1)}`,
+        marginBottom: `${rhythm(1)}`,
         position: 'relative',
-        width: `calc(100% + ${rhythmMethod(8)})`,
-        height: `${rhythmMethod(18)}`,
-        marginLeft: `${rhythmMethod(-4)}`
+        width: `calc(100% + ${rhythm(8)})`,
+        height: `${rhythm(18)}`,
+        marginLeft: `${rhythm(-4)}`
       }">
     </div>
     <div v-html="$page.post.content" class="content"></div>
     <hr
       :style="{
-        marginBottom: `${rhythmMethod(1)}`
+        marginBottom: `${rhythm(1)}`
       }"
     />
     <Bio :settings=$page.settings.edges[0].node />
@@ -91,9 +91,10 @@
 
 <script>
 import Bio from '../components/Bio';
-import { rhythm, scale } from '../utils/typography';
+import mixins from '../utils/mixins'
 
 export default {
+  mixins: [mixins],
   metaInfo() {
     return {
       title: this.$page.post.title,
@@ -101,14 +102,6 @@ export default {
   },
   components: {
     Bio
-  },
-  methods: {
-    rhythmMethod(value) {
-      return rhythm(value);
-    },
-    scaleMethod(value) {
-      return scale(value);
-    },
   }
 };
 </script>

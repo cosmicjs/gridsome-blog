@@ -6,20 +6,20 @@
       backgroundSize: 'cover',
       backgroundPosition: 'right',
       width: '100%',
-      height: `${rhythmMethod(14)}`,
+      height: `${rhythm(14)}`,
       position: 'relative',
-      marginBottom:`${rhythmMethod(1.5)}`,
+      marginBottom:`${rhythm(1.5)}`,
       }">
       <h1
         :style="{
-          ...scaleMethod(1.3),
+          ...scale(1.3),
           position: 'absolute',
           textAlign: 'center',
           left: 0,
           right: 0,
-          top: `${rhythmMethod(4)}`,
+          top: `${rhythm(4)}`,
           marginTop: 0,
-          height: `${rhythmMethod(2.5)}`,
+          height: `${rhythm(2.5)}`,
         }"
       >
       <g-link
@@ -37,8 +37,8 @@
     <div :style="{
         marginLeft: 'auto',
         marginRight: 'auto',
-        maxWidth: rhythmMethod(24),
-        padding: `0 ${rhythmMethod(3 / 4)} ${rhythmMethod(1.5)} ${rhythmMethod(3 / 4)}`,
+        maxWidth: rhythm(24),
+        padding: `0 ${rhythm(3 / 4)} ${rhythm(1.5)} ${rhythm(3 / 4)}`,
         minHeight: 'calc(100vh - 42px)',
       }">
       <slot/>
@@ -91,7 +91,7 @@
 </div> 
 </template>
 <script>
-import { rhythm, scale } from '../utils/typography'
+import mixins from '../utils/mixins'
 
 // Import typefaces
 import 'typeface-montserrat'
@@ -99,14 +99,7 @@ import 'typeface-merriweather'
 
 export default {
   props: ['settings', 'hero'],
-  methods: {
-    rhythmMethod(value) {
-      return rhythm(value);
-    },
-    scaleMethod(value) {
-      return scale(value);
-    },
-  }
+  mixins: [mixins]
 }
 </script>
 <style>
