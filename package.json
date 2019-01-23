@@ -1,0 +1,17 @@
+{
+  "name": "gridsome-blog-cosmicjs",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "gridsome": "^0.4.0",
+    "gridsome-source-cosmicjs": "https://github.com/jazibsawar/gridsome-source-cosmicjs/tarball/master",
+    "typeface-merriweather": "0.0.54",
+    "typeface-montserrat": "0.0.54",
+    "typography": "^0.16.18",
+    "typography-theme-wordpress-2016": "^0.16.18"
+  }
+}
