@@ -18,7 +18,7 @@
 npm install --global @gridsome/cli
 
 # run from your CLI
-gridsome new gridsome-example-blog https://github.com/jazibsawar/gridsome-blog-cosmicjs
+gridsome new gridsome-blog https://github.com/cosmicjs/gridsome-blog
 ```
 In `gridsome.config.js` you need to add configuration for your Cosmic JS Bucket
 
@@ -41,6 +41,6 @@ Then
 
 ``` bash
 # Then you can run it by
-cd gridsome-example-blog
+cd gridsome-blog
 npm run develop
 ```
