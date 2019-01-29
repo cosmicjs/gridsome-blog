@@ -2,14 +2,17 @@
   "name": "gridsome-blog-cosmicjs",
   "private": true,
   "scripts": {
-    "start": "gridsome build; gridsome serve --port $PORT",
     "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "serve": "node server.js",
+    "start": "npm run build && npm run serve"
   },
   "dependencies": {
+    "connect": "^3.6.6",
     "gridsome": "^0.4.0",
     "gridsome-source-cosmicjs": "https://github.com/cosmicjs/gridsome-source-cosmicjs",
+    "serve-static": "^1.13.2",
     "typeface-merriweather": "0.0.54",
     "typeface-montserrat": "0.0.54",
     "typography": "^0.16.18",
