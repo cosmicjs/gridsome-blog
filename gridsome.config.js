@@ -13,7 +13,7 @@ module.exports = {
         bucketSlug: process.env.COSMIC_BUCKET || 'gridsome-blog-cosmicjs',
         objectTypes: [`posts`, `settings`],
         apiAccess: {
-          read_key: process.env.COSMIC_READ_KEY
+          read_key: process.env.COSMIC_READ_KEY || ''
         }
       },
     }
