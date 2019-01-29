@@ -10,10 +10,10 @@ module.exports = {
     {
       use: 'gridsome-source-cosmicjs',
       options: {
-        bucketSlug: 'gridsome-blog-cosmicjs',
+        bucketSlug: process.env.COSMIC_BUCKET || 'gridsome-blog-cosmicjs',
         objectTypes: [`posts`, `settings`],
         apiAccess: {
-          read_key: 'g9FO33DH9ZyVfpM76b3EAx9b0dBc22ihePxI3BvlBxtYiTzITR'
+          read_key: process.env.COSMIC_READ_KEY
         }
       },
     }
