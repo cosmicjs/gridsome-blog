@@ -2,7 +2,7 @@
 <div>
     <div v-if="hero" :style="{
       backgroundColor: '#007ACC',
-      backgroundImage: `url(${settings.metadata.homepageHero.imgixUrl.src}?w=2000)`,
+      backgroundImage: `url(${settings.metadata.homepage_hero.imgix_url}?w=2000)`,
       backgroundSize: 'cover',
       backgroundPosition: 'right',
       width: '100%',
@@ -30,7 +30,7 @@
         }"
         :to="'/'"
       >
-          {{ settings.metadata.siteHeading }}
+          {{ settings.metadata.site_heading }}
         </g-link>
       </h1>
     </div>

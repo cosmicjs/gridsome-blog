@@ -5,7 +5,7 @@
       <h3>
         <g-link :to="`posts/${item.node.slug}`">{{item.node.title}}</g-link>
       </h3>
-      <small>{{item.node.createdAt}}</small>
+      <small>{{item.node.created_at}}</small>
       <p>{{ item.node.metadata.description }}</p>
     </div>
   </Layout>
@@ -22,7 +22,7 @@
           id
           slug
           title
-          createdAt(format: "DD MMMM, YYYY")
+          created_at(format: "MMMM DD, YYYY")
         }
       }
     }
@@ -30,15 +30,15 @@
       edges {
         node {
           metadata {
-            siteTitle,
-            siteHeading,
-            homepageHero {
-              imgixUrl
+            site_title,
+            site_heading,
+            homepage_hero {
+              imgix_url
             },
-            authorBio, 
-            authorName,
-            authorAvatar{
-              imgixUrl
+            author_bio, 
+            author_name,
+            author_avatar{
+              imgix_url
             },
           }
         }

@@ -1,6 +1,6 @@
 <template>
  <Layout :hero=false :settings=$page.settings.edges[0].node >
-    <h3>{{$page.settings.edges[0].node.metadata.siteHeading}}</h3>
+    <h3>{{$page.settings.edges[0].node.metadata.site_heading}}</h3>
     <g-link :to="`/`"> ← Back to Posts</g-link>
     <h1 :style="{marginTop: rhythm(1)}">{{$page.post.title}}</h1>
     <p :style="{
@@ -8,10 +8,10 @@
       display: 'block',
       marginBottom: rhythm(0.6),
       marginTop: rhythm(-0.6),
-    }">{{$page.post.createdAt}}</p>
+    }">{{$page.post.created_at}}</p>
     <div :style="{
         backgroundColor: '#007ACC',
-        backgroundImage: `url(${$page.post.metadata.hero.imgixUrl.src}?w=2000)`,
+        backgroundImage: `url(${$page.post.metadata.hero.imgix_url}?w=2000)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         marginBottom: `${rhythm(1)}`,
@@ -38,12 +38,12 @@
       }"
     >
       <li v-if="$page.post.prevPath">
-        <g-link :to="'/'+$page.post.prevPath" rel="prev">
+        <g-link :to="{ path: `/${$page.post.prevPath}` }" rel="prev">
           ← {{$page.post.prevTitle}}
         </g-link>
       </li>
       <li v-if="$page.post.nextPath">
-        <g-link :to="'/'+$page.post.nextPath" rel="next">
+        <g-link :to="{ path: `/${$page.post.nextPath}` }" rel="next">
          {{$page.post.nextTitle}} →
         </g-link>
       </li>
@@ -61,10 +61,10 @@
       nextPath
       nextTitle
       prevTitle
-      createdAt(format: "MMMM DD, YYYY")
+      created_at(format: "MMMM DD, YYYY")
       metadata {
         hero {
-          imgixUrl
+          imgix_url
         }
       }
     }
@@ -72,15 +72,15 @@
       edges {
         node {
           metadata {
-            siteTitle,
-            siteHeading,
-            homepageHero {
-              imgixUrl
+            site_title,
+            site_heading,
+            homepage_hero {
+              imgix_url
             },
-            authorBio, 
-            authorName,
-            authorAvatar{
-              imgixUrl
+            author_bio, 
+            author_name,
+            author_avatar {
+              imgix_url
             },
           }
         }
