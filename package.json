@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "gridsome": "^0.7.12",
-    "gridsome-source-cosmicjs": "^1.0.1",
+    "gridsome-source-cosmicjs": "^1.0.2",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75",
     "typography": "^0.16.19",
