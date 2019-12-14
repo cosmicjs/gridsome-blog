@@ -9,13 +9,15 @@
     "start": "npm run build && npm run serve"
   },
   "dependencies": {
-    "connect": "^3.6.6",
-    "gridsome": "^0.4.0",
-    "gridsome-source-cosmicjs": "https://github.com/cosmicjs/gridsome-source-cosmicjs",
-    "serve-static": "^1.13.2",
-    "typeface-merriweather": "0.0.54",
-    "typeface-montserrat": "0.0.54",
-    "typography": "^0.16.18",
-    "typography-theme-wordpress-2016": "^0.16.18"
+    "gridsome": "^0.7.12",
+    "gridsome-source-cosmicjs": "^1.0.1",
+    "typeface-merriweather": "0.0.72",
+    "typeface-montserrat": "0.0.75",
+    "typography": "^0.16.19",
+    "typography-theme-wordpress-2016": "^0.16.19"
+  },
+  "devDependencies": {
+    "connect": "^3.7.0",
+    "serve-static": "^1.14.1"
   }
 }
